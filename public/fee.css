@@ -1,0 +1,79 @@
+body {
+    background: url('w.png') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main-box {
+    width: 400px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.e-mail, .info, .required, .mail-field, .next-btn {
+    margin-bottom: 15px;
+}
+
+.e-mail label {
+    display: block;
+    font-size: 24px;
+    color: #333;
+}
+
+.required {
+    display: inline-block;
+    background: #FF0000;
+    border-radius: 15px;
+    color: white;
+    padding: 2px 10px;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.line {
+    border-bottom: 1px solid #ccc;
+}
+
+.info .mail-info {
+    font-size: 14px;
+    color: #666;
+}
+
+.mail-field {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.next-btn {
+    background: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+.next-btn:hover {
+    background: #003d82;
+}
+
+.next-info {
+    margin: 0;
+}

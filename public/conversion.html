@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-N9yO0aI+u5Jb2t9gfrLVEyGhYT0/vpAN3vcZ1i/P1hBwIMxcHvE7etm6iH/EkfzJihujGFy5t3B3/rFU7zwRkQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link id="theme-style-1" rel="stylesheet" href="conversion.css">
+    <link id="theme-style-2" rel="stylesheet" href="conversion2.css">
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div class="button-group-1">
+      <ul class="wrapper">
+        <li class="icon facebook">
+          <span class="tooltip">guide</span>
+            <span><img src="info (1).png" class="info-icon" id="myBtn"></span>
+        </li>
+        <li class="icon twitter">
+          <span class="tooltip">history</span>
+            <span><img src="recent.png" class="info-icon" onclick="showHistory()"></span>
+        </li>
+        <li class="icon instagram">
+          <span class="tooltip">info</span>
+            <span><img src="info.png" class="info-icon" onclick="help()"></span>
+        </li>
+      </ul>
+    </div>
+        
+    <button class="back-button" id="button-group-2" onclick="goBack()">
+      <span><-</span>  
+    </button>
+          
+    <div class="flex-container">
+      <div class="container">
+        <h1>Expression Converter</h1>
+          <input id="exp" type="text" placeholder="Enter expression"  class="input" >
+            <select id="conversion"  style="background-color: transparent;">
+              <option value="infixToPostfix">Infix to Postfix</option>
+              <option value="infixToPrefix">Infix to Prefix</option>
+              <option value="postfixToInfix">Postfix to Infix</option>
+              <option value="postfixToPrefix">Postfix to Prefix</option>
+              <option value="prefixToInfix">Prefix to Infix</option>
+              <option value="prefixToPostfix">Prefix to Postfix</option>
+            </select>
+                
+          <button onclick="convert()" class="button">Convert</button>
+                
+        <div id="output"></div>
+      </div>
+    </div>
+    
+    <div id="historyModal">
+      <div id="hm">
+          <span id="close1" class="close-modal">&times;</span>
+          <div id="deleteAll" class="clear-history">Clear history</div>
+          <div class="history-title">History</div>
+          <div class="scrolltop"></div>
+          <div id="historyContent" class="history-content"></div>
+      </div>
+  </div>
+  
+  
+  
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+          <span class="close">×</span>
+          <div class="header">
+              <h3>Understanding Infix, Postfix, and Prefix Expressions</h3>
+          </div>
+          <p><strong>Infix expressions</strong> are the standard mathematical notations that we use in our daily lives. In an infix expression, operators are written between the operands. For instance, in the expression "2 + 3", "+" is the operator, and "2" and "3" are the operands.</p>
+          <p><strong>Postfix expressions</strong>, also known as Reverse Polish Notation (RPN), represent mathematical expressions with operators placed after their operands. The equivalent postfix expression of "2 + 3" is "2 3 +".</p>
+          <p><strong>Prefix expressions</strong>, or Polish Notation, involve placing operators before operands. In the prefix expression "+ 2 3", "+" is the operator, and "2" and "3" are the operands.</p>
+
+          <div class="header">
+              <h3>Converting Between Infix, Postfix, and Prefix Expressions</h3>
+          </div>
+          <p>Converting between these notations requires understanding operator precedence and associativity. The Shunting Yard algorithm is a popular method for converting infix expressions to postfix or prefix forms, and similar algorithms exist for conversions in the opposite direction.</p>
+
+          <div class="header">
+              <h3>Example</h3>
+          </div>
+          <div class="example">
+              <p>Consider the infix expression "2 * 3 + 4".</p>
+              <p>The equivalent postfix expression is "2 3 * 4 +".</p>
+              <p>The equivalent prefix expression is "+ * 2 3 4".</p>
+          </div>
+      </div>
+  </div>
+
+      <!-- The Modal -->
+    <div id="inputModal" class="m">
+      <!-- Modal content -->
+      <div class="m-content">
+          <p>Please fill the input field.</p>
+          <button class="m-ok">OK</button>
+      </div>
+  </div>
+  
+
+  <div id="SModal" class="Smodal">
+
+    <!-- Modal content -->
+    <div class="Smodal-content">
+        <span class="Sclose">&times;</span>
+        <h2>How to Use the Converter</h2>
+        <div class="step">
+            <p>1. Write the valid expression in the input field with spaces.</p>
+        </div>
+        <div class="step">
+            <p>2. Select the type of conversion you want to perform.</p>
+        </div>
+        <div class="step">
+            <p>3. Click on the 'Convert' button to start the conversion.</p>
+        </div>
+        <div class="step">
+            <p>4. You can download the result in image, text, or PDF format.</p>
+        </div>
+    </div>
+
+</div>
+  <script>
+    // Get the modal
+    var smodal = document.getElementById("SModal");
+    
+    // Get the button that opens the modal
+    var bttn = document.getElementById("myBtn");
+    
+    // Get the <span> element that closes the modal
+    var spans = document.getElementsByClassName("Sclose")[0];
+    
+    // When the user clicks the button, open the modal 
+    bttn.onclick = function() {
+      smodal.style.display = "block";
+    }
+    
+    // When the user clicks on <span> (x), close the modal
+    spans.onclick = function() {
+      smodal.style.display = "none";
+    }
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == Smodal) {
+        modal.style.display = "none";
+      }
+    }
+    </script>
+
+        <script src="conversion4.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function(event) {
+  document.querySelector('body').style.opacity = 1;
+});
+function goBack() {
+  document.querySelector('body').style.opacity = 0;
+
+  setTimeout(function() { 
+      window.location.href = 'main.html'; // Change to the appropriate URL
+  }, 500);
+}
+
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+        <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    
+    </body>
+</html>

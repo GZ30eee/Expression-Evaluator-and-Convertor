@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="globals.css" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- DIV ONE -->
+        <div class="macbook-air" id="div1">
+    <div class="overlap-group-wrapper">
+        <div class="overlap-group">
+            <div class="overlap">
+                <div class="rectangle" onclick="if (validateForm(event)) document.getElementById('div1').style.display='none';document.getElementById('div2').style.display='block'"></div>
+                <div class="text-wrapper">Next</div>
+            </div>
+            <div class="div">
+                <p class="p" style="margin: 0px;">Enter your mail to continue the response form</p>
+                <img class="line" src="line.png" />
+            </div>
+            <div class="text-wrapper-2">E-mail</div>
+            <div class="div-wrapper"><div class="text-wrapper-3">Required</div></div>
+            <input type="email" id="email-input" class="overlap-2" placeholder="your mail here" style="border-color: transparent;">
+                                </input>
+        </div>
+    </div>
+</div>
+
+        <!---->
+        <!--DIV TWO-->
+        <div class="macbook-air" id="div2" style="display: none;">
+            <div class="overlap-group-wrapper">
+                <div class="overlap-group">
+                    <div class="overlap">
+                        <div class="rectangle" onclick="if (validateForm()) document.getElementById('div2').style.display='none';document.getElementById('div3').style.display='block'"></div>
+                        <div class="text-wrapper">Next</div>
+                    </div>
+                    <p class="divtwo">How easy was it to use the post-pre-infix converter and evaluator?</p>
+                    <div class="text-wrapper-2">Ease of Use</div>
+                    <div class="div-wrapper-two"><div class="text-wrapper-3">Required</div></div>
+                    <div class="radio-button-group">
+                        <div class="radio-with-label" onclick="selectOption(this)">
+                            <div class="radio"></div>
+                            <div class="text-wrapper-4-two">Very easy</div>
+                        </div>
+                        <div class="radio-with-label" onclick="selectOption(this)">
+                            <div class="radio"></div>
+                            <div class="text-wrapper-4-two">Somewhat easy</div>
+                        </div>
+                        <div class="radio-with-label" onclick="selectOption(this)">
+                            <div class="radio"></div>
+                            <div class="text-wrapper-4-two">Neutral</div>
+                        </div>
+                        <div class="radio-with-label" onclick="selectOption(this)">
+                            <div class="radio"></div>
+                            <div class="text-wrapper-4-two">Somewhat difficult</div>
+                        </div>
+                        <div class="radio-with-label" onclick="selectOption(this)">
+                            <div class="radio"></div>
+                            <div class="text-wrapper-4-two">Very difficult</div>
+                        </div>
+                    </div>
+                    <img class="linetwo" src="line.svg" />
+                </div>
+            </div>
+        </div>
+        
+
+        
+        <!---->
+        <!--DIV THREE-->
+        <div class="macbook-air" id="div3" style="display: none;">
+            <div class="overlap-group-wrapper">
+                <div class="overlap-group">
+                    <div class="overlap">
+                        <div class="rectangle" onclick="if (validateForm()) document.getElementById('div3').style.display='none';document.getElementById('div4').style.display='block'"></div>
+                        <div class="text-wrapper">Next</div>
+                    </div>
+                    <p class="divtwo">How would you rate the functionality of the converter and evaluator?</p>
+                    <div class="text-wrapper-2">Functionality</div>
+                    <div class="div-wrapper-two"><div class="text-wrapper-3">Required</div></div>
+                    <div class="radio-button-group">
+                        <div class="radio-with-label" onclick="selectOption(this)">
+                            <div class="radio"></div>
+                            <div class="text-wrapper-4-two">Excellent</div>
+                        </div>
+                        <div class="radio-with-label" onclick="selectOption(this)">
+                            <div class="radio"></div>
+                            <div class="text-wrapper-4-two">Good</div>
+                        </div>
+                        <div class="radio-with-label" onclick="selectOption(this)">
+                            <div class="radio"></div>
+                            <div class="text-wrapper-4-two">Average</div>
+                        </div>
+                        <div class="radio-with-label" onclick="selectOption(this)">
+                            <div class="radio"></div>
+                            <div class="text-wrapper-4-two">Below&nbsp;Average</div>
+                        </div>
+                        <div class="radio-with-label" onclick="selectOption(this)">
+                            <div class="radio"></div>
+                            <div class="text-wrapper-4-two">Bad</div>
+                        </div>
+                    </div>
+                    <img class="linetwo" src="line.svg" />
+                </div>
+            </div>
+        </div>
+        
+
+<div class="macbook-air" id="div4" style="display: none;">
+    <div class="overlap-group-wrapper">
+        <div class="overlap-group">
+            <div class="overlap">
+                <div class="rectangle" onclick="if (validateForm()) document.getElementById('div4').style.display='none';document.getElementById('div5').style.display='block'"></div>
+                <div class="text-wrapper">Next</div>
+            </div>
+            <p class="divtwo">How accurate were the results provided by the converter and evaluator?</p>
+            <div class="text-wrapper-2">Accuracy</div>
+            <div class="div-wrapper-two"><div class="text-wrapper-3">Required</div></div>
+            <div class="radio-button-group">
+                <div class="radio-with-label" onclick="selectOption(this)">
+                    <div class="radio"></div>
+                    <div class="text-wrapper-4-two">Always&nbsp;accurate</div>
+                </div>
+                <div class="radio-with-label" onclick="selectOption(this)">
+                    <div class="radio"></div>
+                    <div class="text-wrapper-4-two">USually&nbsp;accurate</div>
+                </div>
+                <div class="radio-with-label" onclick="selectOption(this)">
+                    <div class="radio"></div>
+                    <div class="text-wrapper-4-two">Sometimes&nbsp;accurate</div>
+                </div>
+                <div class="radio-with-label" onclick="selectOption(this)">
+                    <div class="radio"></div>
+                    <div class="text-wrapper-4-two">RArely&nbsp;accurate</div>
+                </div>
+                <div class="radio-with-label" onclick="selectOption(this)">
+                    <div class="radio"></div>
+                    <div class="text-wrapper-4-two">Never&nbsp;accurate</div>
+                </div>
+            </div>
+            <img class="linetwo" src="line.svg" />
+        </div>
+    </div>
+</div>
+
+<div class="macbook-air" id="div5" style="display: none;">
+    <div class="overlap-group-wrapper">
+        <div class="overlap-group">
+            <div class="overlap">
+                <div class="rectangle" onclick="if (validateForm()) document.getElementById('div5').style.display='none';document.getElementById('div6').style.display='block'"></div>
+                <div class="text-wrapper">Next</div>
+            </div>
+            <p class="divtwo">How was the performance and speed of the conversion and evaluation process?</p>
+            <div class="text-wrapper-2">Performance</div>
+            <div class="div-wrapper-two"><div class="text-wrapper-3">Required</div></div>
+            <div class="radio-button-group">
+                <div class="radio-with-label" onclick="selectOption(this)">
+                    <div class="radio"></div>
+                    <div class="text-wrapper-4-two">Very&nbsp;fast</div>
+                </div>
+                <div class="radio-with-label" onclick="selectOption(this)">
+                    <div class="radio"></div>
+                    <div class="text-wrapper-4-two">fast</div>
+                </div>
+                <div class="radio-with-label" onclick="selectOption(this)">
+                    <div class="radio"></div>
+                    <div class="text-wrapper-4-two">acceptable</div>
+                </div>
+                <div class="radio-with-label" onclick="selectOption(this)">
+                    <div class="radio"></div>
+                    <div class="text-wrapper-4-two">Below&nbsp;Slow</div>
+                </div>
+                <div class="radio-with-label" onclick="selectOption(this)">
+                    <div class="radio"></div>
+                    <div class="text-wrapper-4-two">Very&nbsp;Slow</div>
+                </div>
+            </div>
+            <img class="linetwo" src="line.svg" />
+        </div>
+    </div>
+</div>
+
+<div class="macbook-air" id="div6" style="display: none;">
+    <div class="overlap-group-wrapper">
+        <div class="overlap-group">
+            <div class="overlap">
+                <div class="rectangle" onclick="if (validateForm())document.getElementById('div6').style.display='none';document.getElementById('div7').style.display='block'"></div>
+                <div class="text-wrapper">Next</div>
+            </div>
+            <p class="divtwo"> Overall, how satisfied are you with the web application?</p>
+            <div class="text-wrapper-2">Overall Performance</div>
+            <div class="div-wrapper-two"><div class="text-wrapper-3">Required</div></div>
+            <div class="radio-button-group">
+                <div class="radio-with-label" onclick="selectOption(this)">
+                    <div class="radio"></div>
+                    <div class="text-wrapper-4-two">Very&nbsp;Satisfied</div>
+                </div>
+                <div class="radio-with-label" onclick="selectOption(this)">
+                    <div class="radio"></div>
+                    <div class="text-wrapper-4-two">Satisfied</div>
+                </div>
+                <div class="radio-with-label" onclick="selectOption(this)">
+                    <div class="radio"></div>
+                    <div class="text-wrapper-4-two">Neutral</div>
+                </div>
+                <div class="radio-with-label" onclick="selectOption(this)">
+                    <div class="radio"></div>
+                    <div class="text-wrapper-4-two">Unsatisfied</div>
+                </div>
+                <div class="radio-with-label" onclick="selectOption(this)">
+                    <div class="radio"></div>
+                    <div class="text-wrapper-4-two">Very&nbsp;Unsatisfied</div>
+                </div>
+            </div>
+            <img class="linetwo" src="line.svg" />
+        </div>
+    </div>
+</div>
+
+
+<div class="macbook-air" id="div7" style="display: none;">
+    <div class="overlap-group-wrapper">
+        <div class="overlap-group">
+            <div class="overlap">
+                <div class="rectangle"></div>
+                <div class="text-wrapper-seven" id="final">Finish</div>
+            </div>
+            <p class="div">Are there any additional features you would like to see in this web application?</p>
+            <div class="text-wrapper-2">Feature Requests</div>
+            <img class="line" src="img/line-1.svg" />
+            <textarea class="rectangle-2-seven" type="text" placeholder="Enter text here"></textarea>
+            <div class="div-wrapper-seven"><div class="text-wrapper-3-seven">Optional</div></div>
+        </div>
+    </div>
+</div>
+    <script src="feedback.js"></script>
+    <script src="server.js"></script>
+
+    </body>
+</html>

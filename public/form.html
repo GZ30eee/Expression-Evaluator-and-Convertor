@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 50px;
+        }
+        form {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type=text], input[type=email] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        input[type=submit] {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        input[type=submit]:hover {
+            background-color: #0056b3;
+        }
+        .star-rating {
+            direction: rtl;
+            display: inline-block;
+            padding: 20px;
+            width: 200px; /* Limit the width of the star rating */
+        }
+        .star-rating input[type=radio] {
+            display: none;
+        }
+        .star-rating label {
+            color: lightgray;
+            font-size: 30px;
+            padding: 0 5px;
+            cursor: pointer;
+        }
+        .star-rating input[type=radio]:checked ~ label,
+        .star-rating label:hover,
+        .star-rating label:hover ~ label {
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="rating">Overall Rating:</label>
+        <div class="star-rating">
+            <!-- Overall rating stars here -->
+        </div>
+        <br>
+        <label for="accuracy">Accuracy:</label>
+        <div class="star-rating">
+            <!-- Accuracy rating stars here -->
+        </div>
+        <br>
+        <label for="efficiency">Efficiency:</label>
+        <div class="star-rating">
+            <!-- Efficiency rating stars here -->
+        </div>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            submitForm();
+        });
+
+        function submitForm() {
+            // Fetch API to submit form data to the server
+            fetch("http://localhost:9000/submit-form", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    name: document.getElementById("name").value,
+                    email: document.getElementById("email").value,
+                    rating: document.querySelector('input[name="rating"]:checked').value,
+                    accuracy: document.querySelector('input[name="accuracy"]:checked').value,
+                    efficiency: document.querySelector('input[name="efficiency"]:checked').value,
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                alert("Form submitted successfully!");
+            })
+            .catch(error => {
+                console.error("Error submitting form:", error);
+                alert("Error submitting form. Please try again.");
+            });
+        }
+    </script>
+</body>
+</html>

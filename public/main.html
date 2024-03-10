@@ -1,0 +1,70 @@
+<html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Main Page</title>
+        <meta charset="utf-8">
+        <link id="theme-style-1" rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+      <div class="button-group-1">
+        <ul class="wrapper">
+          <li class="icon LinkedIn">
+                <span class="tooltip">LinkedIn</span>
+                  <a href="https://www.linkedin.com/in/ghanshyamsinh-zala-1a1b9924b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                    <span><img src="linkedin.png" class="info-icon"></span>
+                  </a>
+            </li>
+            <li class="icon Github">
+                <span class="tooltip">GitHub</span>
+                  <a href="https://www.github.com" target="_blank">
+                    <span><img src="github (1).png" class="info-icon"></span>
+                  </a>
+            </li>
+            <li class="icon Behance">
+              <span class="tooltip">Behance</span>
+                <a href="https://www.behance.net" target="_blank">
+                  <span><img src="behance.png" class="info-icon"></span>
+                </a>
+            </li>
+            <li class="icon Feedback">
+               <span class="tooltip">Feedback</span>
+                  <span onclick="openForm()"><img src="loyalty.png" class="info-icon"></span>
+            </li>
+        </ul>
+      </div>
+    
+    <div class="button-group-2" style="margin-top: 40px;">
+      <label class="theme-switch">
+        <label class="switch">
+          <input type="checkbox" id="theme-button">
+            <span class="slider"></span>
+        </label>
+      </label>
+    </div>
+  
+    <div class="loader" id="loader"></div>
+ 
+    <div class="flex-container">
+      <div class="container">
+        <div>
+          <h1>
+            <span style="color: black; font-size: 30px; font-family: Inter; font-style: italic; font-weight: 500; word-wrap: break-word">Let the app. do its </span>
+            <span style="color: black; font-size: 30px; font-family: Consolas; font-style: italic; font-weight: 700; word-wrap: break-word">magic</span>
+            <span style="color: black; font-size: 30px; font-family: Inter; font-style: italic; font-weight: 500; word-wrap: break-word"> and </span>
+            <span style="color: black; font-size: 30px; font-family: Consolas; font-style: italic; font-weight: 700; word-wrap: break-word">wonders</span>
+          </h1>
+        </div>
+        
+        <button role="button" id="convertButton" onclick="transitionToPage('conversion.html')">CONVERTOR</button>
+        <button onclick="window.location.href='evaluation.html'" role="button">EVALUATION</button>
+      </div>
+    </div>
+  </body>
+  <script src="main.js"></script>
+  <script>
+    function openForm() {
+          window.location.href = "form.html";
+      }
+  </script>
+</html>

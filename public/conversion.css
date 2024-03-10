@@ -1,0 +1,500 @@
+body {
+  margin: 0;
+  padding: 0; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color:cornsilk;
+  background: url('./img/6068326.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 0.5s;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 15px 15px 20px rgba(0,0,0,0.1),inset -15px -15px 20px rgba(0,0,0,0.1);
+  background-color: #DED0B6;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 90%; /* Adjust as needed for smaller screens */
+  }
+}
+
+.input,
+.select,
+.button {
+  width: 100%; /* Make inputs and button full-width */
+  margin-bottom: 10px; /* Add margin for spacing */
+}
+
+@media only screen and (max-width: 600px) {
+  .icon {
+    margin: 0 5px; /* Adjust margin for smaller screens */
+  }
+}
+
+h1{
+  font-family: monospace;
+  text-decoration: underline;
+}
+
+input, select {
+  margin: 10px;
+  font-family: monospace;
+  width: 40%;
+}
+
+button{
+  width: 30%;
+  font-family: monospace;
+  width: 40%;
+}
+
+#output {
+  margin-top: 20px;
+  text-align: center;
+  width: 100%; 
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #A9A9A9;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color:  #B99470;
+  color: white;
+}
+
+.back {
+  position: absolute;
+  top: 3vh;
+  left: 1vh;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+  
+.info-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.help {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  width: fit-content;
+  margin: 0px 0px 0px;
+}
+
+.help-icon {
+  height: 35px;
+  margin-right: 5px;
+  width: 35px;
+
+}
+
+.button-group-1{
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+#button-group-2{
+  position: fixed;
+  top: 35px;
+  left: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.top-button{
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+.input {
+  height: 30px;
+  border: 2px solid transparent;
+  outline: none;
+  border-bottom: 2px solid #3f3f3f;
+  caret-color: #3f3f3f;
+  background-color: transparent;
+  padding: 5px;
+  transition: .5s linear;
+  font-family: monospace;
+  letter-spacing: 1px;
+  max-width: 190px;
+}
+  
+.input:focus {
+  border-bottom: 2px solid black;
+  caret-color: black;
+  color: black;
+}
+  
+.input:focus::placeholder {
+  color: black;
+}
+
+#conversion {
+  -moz-appearance: none; 
+  appearance: none; 
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #333333;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+  -webkit-appearance: none; 
+}
+  
+#conversion:hover {
+  border-color: #888888;
+}
+  
+#conversion:focus {
+  border-color: #555555;
+}
+  
+#conversion {
+  position: relative;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+}
+  
+#conversion::-ms-expand {
+  display: none;
+}
+
+.button {
+  position: relative;
+  padding: 10px 22px;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background-color: #3B3B3B;
+  transition: all 0.2s ease;
+}
+  
+.button:active {
+  transform: scale(0.96);
+}
+  
+.button:before,
+.button:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: 10;
+  background-repeat: no-repeat;
+}
+  
+  .button.animate:before {
+    top: -70%;
+    background-image: radial-gradient(circle, #3B3B3B 20%, transparent 20%),
+      radial-gradient(circle, transparent 20%, #3B3B3B 20%, transparent 30%),
+      radial-gradient(circle, #3b3b3b 20%, transparent 20%),
+      radial-gradient(circle, #3b3b3b 20%, transparent 20%),
+      radial-gradient(circle, transparent 10%, #3b3b3b 15%, transparent 20%),
+      radial-gradient(circle, #3b3b3b 20%, transparent 20%),
+      radial-gradient(circle, #3b3b3b 20%, transparent 20%),
+      radial-gradient(circle, #3b3b3b 20%, transparent 20%),
+      radial-gradient(circle, #3b3b3b 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+      10% 10%, 18% 18%;
+    background-position: 50% 120%;
+    animation: greentopBubbles 0.6s ease;
+  }
+  
+  @keyframes greentopBubbles {
+    0% {
+      background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+        40% 90%, 55% 90%, 70% 90%;
+    }
+  
+    50% {
+      background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+        50% 50%, 65% 20%, 90% 30%;
+    }
+  
+    100% {
+      background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+        50% 40%, 65% 10%, 90% 20%;
+      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+  }
+  
+  .button.animate:after {
+    bottom: -70%;
+    background-image: radial-gradient(circle, #3b3b3b 20%, transparent 20%),
+      radial-gradient(circle, #3b3b3b 20%, transparent 20%),
+      radial-gradient(circle, transparent 10%, #3b3b3b 15%, transparent 20%),
+      radial-gradient(circle, #3b3b3b 20%, transparent 20%),
+      radial-gradient(circle, #3b3b3b 20%, transparent 20%),
+      radial-gradient(circle, #3b3b3b 20%, transparent 20%),
+      radial-gradient(circle, #3b3b3b 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+    background-position: 50% 0%;
+    animation: greenbottomBubbles 0.6s ease;
+  }
+  
+  @keyframes greenbottomBubbles {
+    0% {
+      background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+        70% -10%, 70% 0%;
+    }
+  
+    50% {
+      background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+        105% 0%;
+    }
+  
+    100% {
+      background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+        110% 10%;
+      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+  }
+  
+  .wrapper {
+    display: inline-flex;
+    list-style: none;
+    height: 120px;
+    width: 100%;
+    /* padding-top: 5px; */
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+  }
+  
+  .wrapper .icon {
+    position: relative;
+    background: #fff;
+    border-radius: 50%;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip {
+    position: absolute;
+    bottom: -60px; 
+    font-size: 14px;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    top: -3px; 
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .icon:hover .tooltip {
+    bottom: -50px; 
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  
+  .wrapper .icon:hover span,
+  .wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .wrapper .facebook:hover,
+  .wrapper .facebook:hover .tooltip,
+  .wrapper .facebook:hover .tooltip::before {
+    background: #B99470 ;
+    color: #fff;
+  }
+  
+  .wrapper .twitter:hover,
+  .wrapper .twitter:hover .tooltip,
+  .wrapper .twitter:hover .tooltip::before {
+    background: #FF8F8F;
+    color: #fff;
+  }
+  
+  .wrapper .instagram:hover,
+  .wrapper .instagram:hover .tooltip,
+  .wrapper .instagram:hover .tooltip::before {
+    background: #8EACCD;
+    color: #fff;
+  }
+
+  .wrapper .feedback:hover,
+  .wrapper .feedback:hover .tooltip,
+  .wrapper .feedback:hover .tooltip::before {
+    background: #D2E0FB;
+    color: #fff;
+  }
+
+  .info-icon {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    margin-top: 3px;
+  }
+
+  .back-button {
+    background-color: transparent;
+    border: 0.125em solid #1A1A1A;
+    border-radius: 60%;
+    box-sizing: border-box;
+    color: #3B3B3B;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    outline: none;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    -webkit-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+    appearance: none;
+    width: 3.75em;
+    height: 3.75em;
+  }
+
+  .back-button .fas {
+    font-size: 1.5em; /* Set the font size for the arrow icon */
+  }
+
+  .back-button:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+
+  .back-button:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+
+  .Smodal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.Smodal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.Sclose {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.Sclose:hover,
+.Sclose:focus {
+    color: black;
+    text-decoration: none;
+}
+
+h2 {
+    text-align: center;
+    color: #009688;
+    margin-bottom: 20px;
+}
+
+.step {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+.step p {
+    line-height: 1.6;
+    margin: 0;
+}
+
+.step:nth-child(even) {
+    background-color: #e0e0e0;
+}
+
+.step:nth-child(odd) {
+    background-color: #f0f0f0;
+}
+  
+  
+  

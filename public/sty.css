@@ -1,0 +1,130 @@
+.main-web-page {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.main-web-page .div {
+    background-image: url(./img/main-web-page.png);
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 1920px;
+    height: 1080px;
+    position: relative;
+}
+
+.main-web-page .overlap {
+    position: absolute;
+    width: 1679px;
+    height: 341px;
+    top: 73px;
+    left: 122px;
+}
+
+.main-web-page .overlap-group {
+    position: absolute;
+    width: 1345px;
+    height: 312px;
+    top: 0;
+    left: 0;
+}
+
+.main-web-page .the-future-is-here {
+    position: absolute;
+    top: 67px;
+    left: 0;
+    font-family: "Anonymous Pro-Bold", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 128px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.main-web-page .text-wrapper {
+    font-weight: 700;
+}
+
+.main-web-page .span {
+    font-family: "Figma Hand-Bold", Helvetica;
+    font-weight: 700;
+}
+
+.main-web-page .rectangle {
+    position: absolute;
+    width: 345px;
+    height: 312px;
+    top: 0;
+    left: 327px;
+    object-fit: cover;
+}
+
+.main-web-page .we-integrate-and {
+    position: absolute;
+    top: 283px;
+    left: 692px;
+    font-family: "Urbanist-Thin", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 48px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.main-web-page .text-wrapper-2 {
+    font-family: "Urbanist-ThinItalic", Helvetica;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.main-web-page .text-wrapper-3 {
+    font-family: "Urbanist-MediumItalic", Helvetica;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.main-web-page .rectangle-2 {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 0;
+    left: 14px;
+    background-color: #d9d9d9;
+}
+
+.main-web-page .overlap-group-2 {
+    position: absolute;
+    width: 666px;
+    height: 140px;
+    top: 596px;
+    left: 627px;
+}
+
+.main-web-page .rectangle-3 {
+    position: absolute;
+    width: 666px;
+    height: 139px;
+    top: 0;
+    left: 0;
+    border-radius: 5700px;
+    background: linear-gradient(180deg, rgb(203.64, 0, 254.55) 0%, rgba(5.09, 0, 254.29, 0) 100%);
+}
+
+.main-web-page .img {
+    position: absolute;
+    width: 297px;
+    height: 140px;
+    top: 0;
+    left: 185px;
+    object-fit: cover;
+}
+
+.main-web-page .rectangle-4 {
+    position: fixed;
+    width: 413px;
+    height: 225px;
+    top: 855px;
+    left: 0;
+}

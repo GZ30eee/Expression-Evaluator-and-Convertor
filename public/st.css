@@ -1,0 +1,119 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: url('wave_background\ -\ Copy.png') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.sp {
+    font-family: "Figma Hand-Bold", Helvetica;
+    font-weight: 700;
+   
+    background-image: url('Rectangle\ 97.png');
+    background-size: cover;
+    background-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.paa{
+    font-size: 100px;
+    margin: 0px 0px;
+
+}
+.cen{
+    position: relative;
+    right: 50px; /* Adjust this value to move the span to the left */
+    top: -60px;
+    
+}
+.pa{
+    margin-left: 30%;
+    position: relative;
+    top: 40px;
+    font-size: 27px;
+    margin-top: -90px;
+    font-style: italic;
+}
+
+.bottom-left {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100px; /* Adjust this value to change the size of the image */
+    height: auto;
+}
+
+.bottom-right {
+    position: fixed;
+    bottom: 0;
+    right: 70px;
+    width: 100px; /* Adjust this value to change the size of the image */
+    height: auto;
+}
+.up-right {
+    position: fixed;
+    top: 0;
+    right: 70px;
+    width: 100px; /* Adjust this value to change the size of the image */
+    height: auto;
+}
+
+.center-left, .center-right {
+    position: fixed;
+    top: 50%;
+    width: 100px; /* Adjust this value to change the size of the image */
+    height: auto;
+    transform: translateY(-50%);
+}
+
+.center-left {
+    position: fixed;
+    top: 30%; /* Decrease this value to move the element up */
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.center-right {
+    right: 0;
+}
+
+.box {
+    width: 666px;
+    height: 139px;
+}
+
+.box .rectangle {
+    position: fixed;
+    width: 500px;
+    height: 80px;
+    top: 70vh; /* This value should be greater than the top value of .pa */
+    left: 60vh;
+    border-radius: 5700px;
+    background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img{
+    width: 200px;
+    height: 61px
+}
+.it{
+    font-weight: bold;
+}
+    

@@ -1,0 +1,157 @@
+body{
+    background: url('w.png') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.container {
+    display: none; /* Hide all divs by default */
+/*     position: fixed; /* Position divs to cover the entire screen */
+   top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.container.active {
+    display: block;
+}
+.main-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 663px;
+    height: 449px;
+    background: rgba(255, 255, 255, 0.59);
+    border-radius: 30px;
+    border: 1px rgba(255, 255, 255, 0.01) solid;
+    backdrop-filter: blur(9.20px);
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; */
+
+}
+.e-mail{
+    color: black;
+    font-size: 32px;
+    font-family: Century Schoolbook;
+    font-weight: 400;
+    word-wrap: break-word;
+    top: 42px;
+    left: 51px;
+    position: relative;
+}
+.required{
+    width: 86px; height: 18px; background: #FF0000; border-radius: 50px; left: 156px; top: 16px;
+    position: relative;
+    
+}
+.text{
+    color: black;
+    font-size: 13px;
+    font-family: Inter;
+    font-style: italic;
+    font-weight: 400;
+    word-wrap: break-word;
+    padding: 1px 15px 1px 16px;
+}
+.line{
+    width: 586px; height: 0px; border: 1px black solid;
+    position: relative;
+    top: 170px;
+    left: 350px;
+    overflow-y: hidden;
+}
+.info{
+   
+    top: 158px;
+    position: relative;
+    left: 363px;
+    overflow-x: hidden;
+    width:fit-content;
+
+}
+.mail-info{
+    color: black; font-size: 13px; font-family: Century Schoolbook; font-weight: 400; word-wrap: break-word; 
+}
+.mail-field{
+    background: white; border-radius: 20px;
+    position: relative;
+    height: 54px;
+    width: 564px;
+    top: 240px;
+    left: 350px;
+    color: black;
+    font-family: Segoe UI;
+    border-color: transparent;
+}
+.next-btn{
+    width: 112px; height: 44px; background: rgba(255, 255, 255, 0.34); border-radius: 30px; border: 1px rgba(255, 255, 255, 0.10) solid; backdrop-filter: blur(8px);
+    position: absolute;
+    top: 450px;
+    left: 570px;
+  /*   padding: 9px 32px; */
+}
+.next-info{
+    color: black;
+font-size: 20px;
+font-family: DM Mono;
+font-weight: 400;
+/* word-wrap: break-word; */
+height: 48px;
+width: 36px;
+margin: 9px 32px;
+}
+
+.radio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #f2f2f2; /* Light pink background */
+    border-radius: 10px;
+    width: 200px;
+  }
+  
+  /* Hide the default radio button */
+  .radio-container input[type="radio"] {
+    display: none;
+  }
+  
+  /* Create a custom radio button */
+  .radio-container label {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
+  }
+  
+  /* Create a custom radio button */
+  .radio-container label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border: 2px solid #4CAF50;
+    border-radius: 50%;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .radio-container input[type="radio"]:checked ~ label:before {
+    background-color: #2196F3;
+  }
+  
+  /* Add a blue background color when hovering over the label */
+  .radio-container label:hover:before {
+    background-color: #ccc;
+  }
